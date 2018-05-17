@@ -7,8 +7,7 @@ JAVA_UPDATE=144
 JAVA_BUILD=01
 JAVA_HOME="/opt/java"
 
-wget -nv -P "/tmp/java_packages/" --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
-    "http://download.oracle.com/otn/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/090f390dda5b47b9b721c7dfaa008135/jre-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz"
+mv "/tmp/jre-8u144-linux-x64.tar.gz" "/tmp/java_packages/"
 tar -xzf "/tmp/java_packages/jre-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" -C "/tmp/java_packages/"
 mkdir -p /opt
 mv "/tmp/java_packages/jre1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "${JAVA_HOME}"
