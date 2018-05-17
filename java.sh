@@ -7,10 +7,9 @@ JAVA_UPDATE=144
 JAVA_BUILD=01
 JAVA_HOME="/opt/java"
 
-mv "/tmp/jre-8u144-linux-x64.tar.gz" "/tmp/java_packages/jre-8u144-linux-x64.tar.gz"
 tar -xzf "/tmp/java_packages/jre-8u144-linux-x64.tar.gz" -C "/tmp/java_packages/"
 mkdir -p /opt
-mv "/tmp/java_packages/jre-8u144-linux-x64.tar.gz" "${JAVA_HOME}"
+mv "/tmp/java_packages/jre1.8.0_144" "${JAVA_HOME}"
 ln -s "$JAVA_HOME/bin/"* "/usr/bin/"
 rm -rf \
    "${JAVA_HOME}/lib/plugin.jar" \
